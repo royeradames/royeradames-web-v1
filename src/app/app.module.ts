@@ -2,8 +2,6 @@ import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { environment } from '../environments/environment';
-import { ServiceWorkerModule } from '@angular/service-worker';
 import { SocialLinksComponent } from './share/component/social-links/social-links.component';
 import { ContactComponent } from './main/contact/contact.component';
 import { ProjectsComponent } from './main/projects/projects.component';
@@ -62,9 +60,6 @@ import { ContentReturnComponent } from './share/component/content-return/content
     AppRoutingModule,
     FormsModule,
     NgOptimizedImage,
-    environment.production
-      ? ServiceWorkerModule.register('service-worker.js')
-      : [],
   ],
   providers: [
     {
